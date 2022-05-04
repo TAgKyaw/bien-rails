@@ -1,0 +1,25 @@
+<%
+=begin%>
+  _ means partial. This is a partial form. Rails know it as long as it starts with an underscore
+<%
+=end%>
+<%= form_for @review do |f| %>
+    
+    <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </p>
+
+    <p>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+    </p>
+
+    <p>
+        <%= f.label :score %>
+        <%= f.number_field :score %>
+    </p>
+
+    <%= f.submit "Save review" %>
+
+<% end %>
