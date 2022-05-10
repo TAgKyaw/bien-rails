@@ -4,6 +4,20 @@
 <%
 =end%>
 <%= form_for @review do |f| %>
+
+    <% if @review.errors.any? %>
+
+        <div class="errors">
+        <% @review.errors.full_messages.each do |message| %>
+            <p> <%= message %> </P>
+            
+        <% end %>
+        </div>  
+
+    <% end %>
+
+
+    
     
     <p>
         <%= f.label :title %>
