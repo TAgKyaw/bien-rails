@@ -90,7 +90,7 @@ class ReviewsController < ApplicationController
 
         #cleaning the code
         # shortcut variable for the whole expression
-        params.require(:review).permit(:title, :body, :score)
+        params.require(:review).permit(:title, :restaurant, :body, :score, :ambiance)
 
     end
 
