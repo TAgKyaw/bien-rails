@@ -2,11 +2,37 @@ class ReviewsController < ApplicationController
 
     def index
         # this is our list page for our reviews
+        # we can filter the list for home page
 
+        #variable declaration
         @number = rand(100)
 
+        #data from url with price parameter
+        @price = params[:price]
+        @cuisine = params[:cuisine]
+
+        #show all the reviews
         @reviews = Review.all
 
+        #filtered by price
+        if @price.present?
+            @reviews = @reviews.where(price: @price)
+        end
+
+        #filtered by cuisine
+        if @cuisine.present?
+            @reviews = @reviews.where(cuisine: @cuisine)
+        
+        end
+
+        #is there a filter for price?
+        # if @price.present?
+        #     #filter by price
+        #     @reviews = Review.where(price: @price)
+        # else
+        #     #selecting all review objects from database
+        #     @reviews = Review.all
+        # end
     end
     # end of index
 
@@ -90,7 +116,7 @@ class ReviewsController < ApplicationController
 
         #cleaning the code
         # shortcut variable for the whole expression
-        params.require(:review).permit(:title, :restaurant, :body, :score, :ambiance)
+        params.require(:review).permit(:title, :restaurant, :body, :score, :ambiance, :cuisine, :price)
 
     end
 

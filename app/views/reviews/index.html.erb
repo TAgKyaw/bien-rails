@@ -4,6 +4,19 @@
 <%
 =end%>
 
+<% content_for :page_title, "Homepage" %>
+
+<nav class="filters"> 
+<%= link_to "All Restaurants", root_path %>
+<%= link_to "$", root_path(price: 1, cuisine: @cusine) %>
+<%= link_to "$$", root_path(price: 2, cuisine: @cusine) %>
+<%= link_to "$$$", root_path(price: 3, cuisine: @cusine) %>
+
+<%= link_to "Chinese", root_path(cuisine: "Chinese", price:@price) %>
+<%= link_to "Mexican", root_path(cuisine: "Mexican", price:@price) %>
+<%= link_to "Italian", root_path(cuisine: "Italian", price:@price) %>
+</nav>
+
 <% @reviews.each do |review| %>
 
     <div class="review">
