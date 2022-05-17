@@ -47,8 +47,14 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "sassc-rails"
 
+#geolocation search 
 gem "geocoder"
 
+# Make our forms look cleaner
+gem 'simple_form'
+
+#active links
+gem 'active_link_to'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
