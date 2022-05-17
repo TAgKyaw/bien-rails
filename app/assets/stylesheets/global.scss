@@ -75,3 +75,36 @@ textarea {
     min-height: 400px;
 }
 
+nav.filters {
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    border-bottom: 2px solid $lightyellow;
+
+    display: flex;
+    align-items: center;
+
+    a{
+        margin: 0 5px 0 0;
+        text-decoration: none;
+        color: $black;
+    }
+
+    div, form{
+        margin: 0 0 0 25px;
+    }
+
+    input {
+        min-width: 200px;
+        font-size: 14px;
+        padding: 4px 5px;
+    }
+    textarea {
+        min-width: 200px;
+        min-height: 3px;
+        font-size: 14px;
+        padding: 4px 5px;
+    }
+}
+
