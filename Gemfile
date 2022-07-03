@@ -15,6 +15,7 @@ group :development do
   gem "sqlite3", "~> 1.4"
 end
 
+#Use postgrelSQL for production
 group :production do
   gem "pg"
 end
@@ -59,6 +60,9 @@ gem "geocoder"
 
 # Make our forms look cleaner
 gem 'simple_form'
+
+# old profanity_filter, to filter bad words.
+gem "profanity_filter"
 
 #active links
 gem 'active_link_to'
